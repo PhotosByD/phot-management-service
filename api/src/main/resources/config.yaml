@@ -1,0 +1,15 @@
+kumuluzee:
+  name: photo-management-service
+  env:
+    name: dev
+  version: 1.0.0
+  server:
+    base-url: http://localhost:8081
+    http:
+      port: 8081
+  datasources:
+  - jndi-name: jdbc/PhotoDS
+    connection-url: jdbc:postgresql://192.168.99.100:5433/photo #TODO check this
+    username: dbuser
+    password: postgres
+    max-pool-size: 20
