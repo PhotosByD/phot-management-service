@@ -1,4 +1,4 @@
-package si.photos.by.d.photo.services;
+package si.photos.by.d.photo.services.beans;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
@@ -7,7 +7,6 @@ import si.photos.by.d.photo.models.entities.Photo;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
@@ -38,7 +37,7 @@ public class PhotoBean {
         return photo;
     }
 
-    public Photo createUser(Photo photo) {
+    public Photo createPhoto(Photo photo) {
         try{
             beginTx();
             em.persist(photo);
@@ -51,7 +50,7 @@ public class PhotoBean {
         return photo;
     }
 
-    public Photo updateUser(Integer photoId, Photo photo) {
+    public Photo updatePhoto(Integer photoId, Photo photo) {
         Photo u = em.find(Photo.class, photoId);
 
         if(u == null) return null;
@@ -69,7 +68,7 @@ public class PhotoBean {
         return photo;
     }
 
-    public boolean deleteUser(Integer userId) {
+    public boolean deletePhoto(Integer userId) {
         Photo photo = em.find(Photo.class, userId);
 
         if(photo != null) {

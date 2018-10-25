@@ -1,7 +1,7 @@
 package si.photos.by.d.photo.api.v1.resources;
 
 import si.photos.by.d.photo.models.entities.Photo;
-import si.photos.by.d.photo.services.PhotoBean;
+import si.photos.by.d.photo.services.beans.PhotoBean;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
