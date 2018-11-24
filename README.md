@@ -1,4 +1,4 @@
-#User management service
+#Photo management service
 ##Docker build locally
 docker build .
 
