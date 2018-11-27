@@ -13,7 +13,7 @@ spec:
         app: photo
     spec:
       containers:
-        - image: photosbyd/photo-service:0.4
+        - image: photosbyd/photo-service:0.5
           name: photo
           env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER

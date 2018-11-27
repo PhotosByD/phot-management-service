@@ -19,6 +19,16 @@ kumuluzee:
   discovery:
     etcd:
       hosts: http://192.168.99.100:2379
-  app-properties:
-    external-services:
-      enabled: false
+  metrics:
+    web-instrumentation:
+    - name: photo-endpoint
+      url-pattern: /v1/photos/*
+  health:
+    checks:
+      data-source-health-check:
+        jndi-name: jdbc/PhotoDS
+      disk-space-health-check:
+        threshold: 100000000000
+app-properties:
+  external-services:
+    enabled: true
