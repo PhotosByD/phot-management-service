@@ -27,8 +27,6 @@ kumuluzee:
     checks:
       data-source-health-check:
         jndi-name: jdbc/PhotoDS
-      disk-space-health-check:
-        threshold: 100000000000
 app-properties:
   external-services:
     enabled: true
