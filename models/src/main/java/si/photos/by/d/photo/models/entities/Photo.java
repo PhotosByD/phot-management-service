@@ -1,6 +1,9 @@
 package si.photos.by.d.photo.models.entities;
 
+import si.photos.by.d.photo.models.dtos.Comment;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "photo")
 @NamedQueries(value =
@@ -20,6 +23,12 @@ public class Photo {
     //TODO add blob or location of picture
     @Column(name = "user_id")
     private Integer userId;
+
+    @Column(name = "photo_url")
+    private String photoURL;
+
+    @Transient
+    private List<Comment> comments;
 
     public Integer getId() {
         return id;
@@ -43,5 +52,21 @@ public class Photo {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public String getPhotoURL() {
+        return photoURL;
+    }
+
+    public void setPhotoURL(String photoURL) {
+        this.photoURL = photoURL;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
