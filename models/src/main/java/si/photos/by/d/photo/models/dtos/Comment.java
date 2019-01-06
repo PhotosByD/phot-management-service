@@ -3,8 +3,7 @@ package si.photos.by.d.photo.models.dtos;
 
 public class Comment {
     private Integer id;
-    private Integer userId;
-    private Integer photoId;
+    private String user;
     private String body;
 
     public Integer getId() {
@@ -15,20 +14,12 @@ public class Comment {
         this.id = id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public String getUser() {
+        return user;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getPhotoId() {
-        return photoId;
-    }
-
-    public void setPhotoId(Integer photoId) {
-        this.photoId = photoId;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getBody() {

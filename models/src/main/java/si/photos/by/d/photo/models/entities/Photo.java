@@ -20,7 +20,6 @@ public class Photo {
     @Column(name = "title")
     private String title;
 
-    //TODO add blob or location of picture
     @Column(name = "user_id")
     private Integer userId;
 
